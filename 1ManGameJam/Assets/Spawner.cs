@@ -7,6 +7,11 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] SpawnPoints;
     public GameObject enemyPrefab;
+    public GameObject bonusPrefab;
+    public float timeForNextBonus = 5f;
+    public float minBonusTime = 5f;
+    public float maxBonusTime = 10f;
+
 
     public enum SpawnState
     {
@@ -44,6 +49,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         waveCountdown = timeBetweenWaves;
+        StartCoroutine(BonusLoop());
     }
 
     private bool EnemyIsAlive()
@@ -120,5 +126,22 @@ public class Spawner : MonoBehaviour
         Transform SpawnPoint = SpawnPoints[UnityEngine.Random.Range(0, SpawnPoints.Length)];
         GameObject enemy = Instantiate(enemyPrefab, SpawnPoint.position, Quaternion.identity, SpawnPoint);
         enemy.GetComponent<Enemy>().SetEnemyLevel(enemyLevel);
+    }
+
+    private IEnumerator BonusLoop()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(timeForNextBonus);
+            SpawnBonus();
+            timeForNextBonus = UnityEngine.Random.Range(minBonusTime, maxBonusTime);
+        }
+    }
+
+    private void SpawnBonus()
+    {
+        Transform SpawnPoint = SpawnPoints[UnityEngine.Random.Range(0, SpawnPoints.Length)];
+        GameObject bonus = Instantiate(bonusPrefab, SpawnPoint.position, Quaternion.identity, SpawnPoint);
+        bonus.GetComponent<Bonus>().SetBonusType((Bonus.BonusType)UnityEngine.Random.Range(0f, Enum.GetNames(typeof(Bonus.BonusType)).Length));
     }
 }

@@ -64,7 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AutoMovement.cs" />
+    <Compile Include="Assets\Bonus.cs" />
+    <Compile Include="Assets\BonusReceiver.cs" />
     <Compile Include="Assets\Cannon.cs" />
+    <Compile Include="Assets\Destroyer.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\FireManager.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
