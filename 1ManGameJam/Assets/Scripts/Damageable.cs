@@ -69,4 +69,11 @@ public class Damageable : MonoBehaviour
         if (dealTo) dealTo.TakeDamage(damageToDeal);
         yield return null;
     }
+
+    public void Regen(float amount)
+    {
+        float healthToRegen = Mathf.Clamp(health + amount, 0, 100) - health;
+        health += healthToRegen;
+        OnHealthChanged(-healthToRegen);
+    }
 }

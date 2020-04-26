@@ -39,10 +39,10 @@ public class BonusReceiver : MonoBehaviour
                 fireManager.UpgradeLevel();
                 break;
             case Bonus.BonusType.Health:
-                //TODO: add health bonus
+                damageable.Regen(20f);
                 break;
             case Bonus.BonusType.Life:
-                //TODO: add life bonus
+                GameManager.Instance.GainLife();
                 break;
             case Bonus.BonusType.Shield:
                 StartCoroutine(Shield());
@@ -57,7 +57,7 @@ public class BonusReceiver : MonoBehaviour
                 }
                 break;
             case Bonus.BonusType.FullRegen:
-                //TODO: add fullregen bonus
+                damageable.Regen(100f);
                 break;
             case Bonus.BonusType.CrazyBomb:
                 //TODO: add crazybomb bonus

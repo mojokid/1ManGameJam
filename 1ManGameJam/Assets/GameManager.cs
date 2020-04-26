@@ -66,6 +66,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    internal void GainLife()
+    {
+        currentLives++;
+        livesText.text = livesText.text = "LIVES: " + currentLives;
+    }
+
     IEnumerator NewSpaceShip()
     {
         yield return new WaitForSeconds(2f);

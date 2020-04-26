@@ -2,9 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bonus : MonoBehaviour
 {
+	public Text bonusText;
+
+	private void Awake()
+	{
+		bonusText = GetComponentInChildren<Text>();
+	}
+
 	public enum BonusType
 	{
 		Armor,
@@ -39,6 +47,43 @@ public class Bonus : MonoBehaviour
 	public void SetBonusType(BonusType _bonusType)
 	{
 		bonusType = _bonusType;
-		//TODO: add text reference, and change color
+		bonusText.text = _bonusType.ToString();
+		SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+		switch (_bonusType)
+		{
+			case BonusType.Armor:
+				spriteRenderer.color = Color.grey;
+				break;
+			case BonusType.FireRate:
+				spriteRenderer.color = Color.yellow;
+				break;
+			case BonusType.CannonUpgrade:
+				spriteRenderer.color = Color.red;
+				break;
+			case BonusType.Health:
+				spriteRenderer.color = Color.white;
+				break;
+			case BonusType.Life:
+				spriteRenderer.color = Color.cyan;
+				break;
+			case BonusType.Shield:
+				spriteRenderer.color = Color.black;
+				break;
+			case BonusType.Speed:
+				spriteRenderer.color = Color.blue;
+				break;
+			case BonusType.ClearAll:
+				spriteRenderer.color = Color.magenta;
+				break;
+			case BonusType.FullRegen:
+				spriteRenderer.color = new Color(0.5f, 0.3f, 0.7f);
+				break;
+			case BonusType.CrazyBomb:
+				spriteRenderer.color = new Color(0.1f, 0.2f, 0.6f);
+				break;
+			default:
+				break;
+		}
 	}
 }
