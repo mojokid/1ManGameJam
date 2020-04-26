@@ -22,5 +22,8 @@ public class Enemy : MonoBehaviour
         {
             fireManager.UpgradeLevel();
         }
+
+        //TODO: change amplitude according to level
+        //GetComponent<AutoMovement>().maxX = 0.88f * (float)level;
     }
 }

@@ -63,12 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AutoMovement.cs" />
     <Compile Include="Assets\Cannon.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\FireManager.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Damageable.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Spawner.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
