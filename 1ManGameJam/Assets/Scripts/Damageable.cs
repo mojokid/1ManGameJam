@@ -9,11 +9,19 @@ public class Damageable : MonoBehaviour
     public float armor = 1f;
     public bool isShielded = false;
 
+    public event Action<float> OnHealthChanged;
+    public event Action OnPlayerDead;
+
     public void TakeDamage(float damage)
     {
+
         float damageToDeal = damage / armor;
         if (!isShielded)
         {
+            if (gameObject.tag == "Player") OnHealthChanged(damageToDeal);
+            //TODO: if enemy, add points
+            //TODO: add point functionality
+
             health -= damageToDeal;
             if (health <= 0)
             {
@@ -24,6 +32,7 @@ public class Damageable : MonoBehaviour
 
     public void Die()
     {
+        if (gameObject.tag == "Player") OnPlayerDead();
         Explode();
     }
 
