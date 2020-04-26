@@ -45,7 +45,7 @@ public class BonusReceiver : MonoBehaviour
                 GameManager.Instance.GainLife();
                 break;
             case Bonus.BonusType.Shield:
-                StartCoroutine(Shield());
+                StartCoroutine(Shield(shieldTime));
                 break;
             case Bonus.BonusType.Speed:
                 StartCoroutine(SpeedBoost());
@@ -60,7 +60,7 @@ public class BonusReceiver : MonoBehaviour
                 damageable.Regen(100f);
                 break;
             case Bonus.BonusType.CrazyBomb:
-                //TODO: add crazybomb bonus
+                StartCoroutine(CrazyBomb(crazyBombTime));
                 break;
             default:
                 break;
@@ -77,14 +77,32 @@ public class BonusReceiver : MonoBehaviour
         yield return null;
     }
 
-    private IEnumerator Shield()
+    public IEnumerator Shield(float _shieldTime)
     {
         yield return new WaitUntil(() => !damageable.isShielded);
         damageable.isShielded = true;
         shield.SetActive(true);
-        yield return new WaitForSeconds(shieldTime);
+        yield return new WaitForSeconds(_shieldTime);
         if(damageable) damageable.isShielded = false;
         if (shield) shield.SetActive(false);
         yield return null;
     }
+
+    public IEnumerator CrazyBomb(float _crazyBombTime)
+    {
+        yield return new WaitUntil(() => !fireManager.isCrazy);
+        fireManager.setCrazy(true);
+        yield return new WaitForSeconds(_crazyBombTime);
+        if (fireManager) fireManager.setCrazy(false);
+        yield return null;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            damageable.Die();
+        }
+    }
+
 }

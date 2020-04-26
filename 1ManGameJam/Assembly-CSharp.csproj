@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\FireManager.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\WaveUI.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

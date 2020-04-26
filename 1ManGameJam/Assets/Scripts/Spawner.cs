@@ -59,8 +59,9 @@ public class Spawner : MonoBehaviour
         if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if (GameObject.FindObjectsOfType<Enemy>() == null)
+            if (GameObject.FindObjectsOfType<Enemy>().Length == 0)
             {
+                Debug.Log("no enemies found");
                 return false;
             }
         }
@@ -94,6 +95,8 @@ public class Spawner : MonoBehaviour
 
     private void WaveCompleted()
     {
+        Debug.Log("wave completed");
+
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
         if (nextWave + 1 > waves.Length -1)
