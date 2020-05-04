@@ -33,6 +33,7 @@ public class Damageable : MonoBehaviour
     public void Die()
     {
         if (gameObject.tag == "Player") OnPlayerDead();
+        else AudioManager.Instance.PlaySound(0);
         Explode();
     }
 

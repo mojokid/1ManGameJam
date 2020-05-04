@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{f4a471a3-67c0-43c6-b2a3-0ca7e4e35697}">
+		<property name="assetPath">
+			<value>1ManGameJam 02 Reface Midi.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.100375</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{890c37c6-af58-4761-82ea-0f62e0450982}</destination>
+		</relationship>
+	</object>
+</objects>

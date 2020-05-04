@@ -40,8 +40,28 @@ public class Bonus : MonoBehaviour
 
 	private void Pop()
 	{
-		//TODO: play sound
+		AudioSource audioSource = GetComponent<AudioSource>();
+		audioSource.pitch = UnityEngine.Random.Range(0.7f, 1.3f);
+		audioSource.PlayOneShot(audioSource.clip);
+		GetComponent<SpriteRenderer>().enabled = false;
+		GetComponent<CircleCollider2D>().enabled = false;
+
+		StartCoroutine(DestroyAfter(2));
+	}
+
+	private IEnumerator DestroyAfter(float seconds)
+	{
+		Text text = GetComponentInChildren<Text>();
+		Vector3 startScale = transform.localScale;
+		float startTime = Time.time;
+		while (Time.time <= startTime + seconds)
+		{
+			transform.localScale = Vector3.Lerp(startScale, startScale * 4, Time.time - startTime);
+			text.color = new Color(text.color.r, text.color.g, text.color.b, Mathf.SmoothStep(1, 0, Time.time - startTime));
+			yield return null;
+		}
 		Destroy(gameObject);
+		yield return null;
 	}
 
 	public void SetBonusType(BonusType _bonusType)

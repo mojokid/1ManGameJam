@@ -29,12 +29,8 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-        DontDestroyOnLoad(gameObject);
-    }
-
-    private void Start()
-    {
-        gameOverCanvas.SetActive(false);
+        //DontDestroyOnLoad(gameObject);
+        //TODO: Find a way to destroy on load, and still run the OnEnable method
     }
 
     public void OnEnable()
@@ -44,6 +40,7 @@ public class GameManager : MonoBehaviour
             playerSpaceship.GetComponent<Damageable>().OnPlayerDead += HandlePlayerDeath;
             playerSpaceship.GetComponent<Damageable>().OnHealthChanged += HandleDamage;
         }
+        gameOverCanvas.SetActive(false);
     }
 
     private void HandleDamage(float damage)

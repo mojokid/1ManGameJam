@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a9bbb0e0-4369-41ac-a521-9885d54245cc}">
+		<property name="assetPath">
+			<value>Cruisin1 07 Dirty Guitar.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{890c37c6-af58-4761-82ea-0f62e0450982}</destination>
+		</relationship>
+	</object>
+</objects>

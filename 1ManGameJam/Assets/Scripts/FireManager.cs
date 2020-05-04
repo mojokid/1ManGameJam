@@ -25,6 +25,8 @@ public class FireManager : MonoBehaviour
         while(cannons.Length > 0)
         {
             yield return new WaitForSeconds(1 / fireRate);
+            AudioManager.Instance.PlaySound(1);
+
             foreach (var cannon in cannons)
             {
                 cannon.Shoot();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{40b85b0b-000e-4d90-95fb-3a4ce9754727}">
+		<property name="assetPath">
+			<value>1ManGameJam 03 TD1 Midi.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.100375</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{890c37c6-af58-4761-82ea-0f62e0450982}</destination>
+		</relationship>
+	</object>
+</objects>

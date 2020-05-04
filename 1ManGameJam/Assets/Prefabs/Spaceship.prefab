@@ -47,6 +47,9 @@ MonoBehaviour:
     type: 3}
   level: -2
   damageMultiplier: 1
+  CrazyBomb: {fileID: 2981149414066544851, guid: a5448cb9da2a08e448dc072385b3ac87,
+    type: 3}
+  isCrazy: 0
 --- !u!1 &248170208
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +97,9 @@ MonoBehaviour:
     type: 3}
   level: -1
   damageMultiplier: 1
+  CrazyBomb: {fileID: 2981149414066544851, guid: a5448cb9da2a08e448dc072385b3ac87,
+    type: 3}
+  isCrazy: 0
 --- !u!1 &403418994
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +228,9 @@ MonoBehaviour:
     type: 3}
   level: -2
   damageMultiplier: 1
+  CrazyBomb: {fileID: 2981149414066544851, guid: a5448cb9da2a08e448dc072385b3ac87,
+    type: 3}
+  isCrazy: 0
 --- !u!1 &1051748915
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +285,7 @@ MonoBehaviour:
   - {fileID: 6343890541112053662, guid: dc409b96066557046a1ab8c0206f4950, type: 3}
   cannons: []
   fireRate: 1
+  isCrazy: 0
 --- !u!1 &1056674973
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +333,9 @@ MonoBehaviour:
     type: 3}
   level: 0
   damageMultiplier: 1
+  CrazyBomb: {fileID: 2981149414066544851, guid: a5448cb9da2a08e448dc072385b3ac87,
+    type: 3}
+  isCrazy: 0
 --- !u!1 &1177350699
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +383,9 @@ MonoBehaviour:
     type: 3}
   level: -1
   damageMultiplier: 1
+  CrazyBomb: {fileID: 2981149414066544851, guid: a5448cb9da2a08e448dc072385b3ac87,
+    type: 3}
+  isCrazy: 0
 --- !u!1 &606854288229755484
 GameObject:
   m_ObjectHideFlags: 0
