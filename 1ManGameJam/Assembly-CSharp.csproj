@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AudioManager.cs" />
+    <Compile Include="Assets\EffectManager.cs" />
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\AutoMovement.cs" />
     <Compile Include="Assets\Scripts\Bonus.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\WaveUI.cs" />
+    <None Include="Assets\FMOD\1ManGameJam\Metadata\SandboxFolder\{9ac96ffe-6640-444b-a3bf-9220023b27df}.xml" />
     <None Include="Assets\FMOD\1ManGameJam\Metadata\AudioFile\{a30f1acd-0e5c-45f7-be44-1e32f7c10863}.xml" />
     <None Include="Assets\FMOD\1ManGameJam\Metadata\AudioFile\{40b85b0b-000e-4d90-95fb-3a4ce9754727}.xml" />
     <None Include="Assets\FMOD\1ManGameJam\Metadata\AudioFile\{28b2d3ec-3f2d-47a9-bb6c-c13b0e364031}.xml" />
@@ -125,6 +127,7 @@
     <None Include="Assets\FMOD\1ManGameJam\Metadata\ParameterPreset\{c246bace-4aed-404b-b63d-903309a01631}.xml" />
     <None Include="Assets\FMOD\1ManGameJam\Metadata\AudioFile\{395ff8ec-9228-474d-853c-d5d1f9845dff}.xml" />
     <None Include="Assets\FMOD\1ManGameJam\Metadata\ParameterPreset\{741aaba6-b44e-4a32-8e00-0cecadf78b6f}.xml" />
+    <None Include="Assets\FMOD\1ManGameJam\Metadata\ProfilerFolder\{2eda8a70-942c-4225-a839-7826a8580d17}.xml" />
     <None Include="Assets\FMOD\1ManGameJam\Metadata\AudioFile\{ca73a9b7-096e-4412-9fad-2575ab89944b}.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -138,8 +141,17 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -162,8 +174,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -180,6 +198,9 @@
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
@@ -192,8 +213,17 @@
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -206,33 +236,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>G:/UnityProjects/1ManGameJam/1ManGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>E:/progs/Unity/2019.3.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

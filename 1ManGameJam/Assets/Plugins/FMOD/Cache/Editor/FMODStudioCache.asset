@@ -84,11 +84,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/1ManGameJam/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637241206124549589
+  lastModified: 637319865381006903
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 870
+    Value: 882
+  Exists: 1
+--- !u!114 &-7803500124744710738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1ManGameJam/Height
+  m_EditorClassIdentifier: 
+  Name: Height
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &-7467573634578122799
 MonoBehaviour:
@@ -161,6 +178,58 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-6601356646781262971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/1ManGameJam/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637319865380946950
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5304996111680453618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1ManGameJam/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 11
+  Default: 0
+  Exists: 1
+--- !u!114 &-4556355683419095051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1ManGameJam/Height
+  m_EditorClassIdentifier: 
+  Name: Height
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-3621448121136139469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +264,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-946805849481737542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/1ManGameJam/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637241209288680447
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-619299706948858043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +350,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-17781135543898322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1ManGameJam/Right
+  m_EditorClassIdentifier: 
+  Name: Right
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,16 +381,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -8100044619302048631}
-  - {fileID: -7063814005073204814}
+  - {fileID: -6601356646781262971}
   EditorEvents:
   - {fileID: 1518031144396404393}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7063814005073204814}
+  - {fileID: -6601356646781262971}
   StringsBanks:
   - {fileID: -8100044619302048631}
-  stringsBankWriteTime: 637241206124549589
+  stringsBankWriteTime: 637319865381006903
   cacheVersion: 3
+--- !u!114 &433982260012282604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1ManGameJam/Enemies
+  m_EditorClassIdentifier: 
+  Name: Enemies
+  Min: 0
+  Max: 11
+  Default: 0
+  Exists: 1
 --- !u!114 &1518031144396404393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,14 +423,14 @@ MonoBehaviour:
   Path: event:/1ManGameJam
   guid: 94204a6b59c8b944a93389fafd7ea03c
   Banks:
-  - {fileID: -7063814005073204814}
+  - {fileID: -6601356646781262971}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6525569717113865329}
-  - {fileID: -6631631006342093737}
-  - {fileID: 1640054950492524196}
+  - {fileID: 8124171652026785293}
+  - {fileID: -4556355683419095051}
+  - {fileID: 433982260012282604}
   MinDistance: 0
   MaxDistance: 0
   Length: 48000
@@ -556,3 +677,20 @@ MonoBehaviour:
   Max: 11
   Default: 0
   Exists: 0
+--- !u!114 &8124171652026785293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/1ManGameJam/Right
+  m_EditorClassIdentifier: 
+  Name: Right
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
